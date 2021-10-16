@@ -1,0 +1,45 @@
+!! XTerm Setup
+
+XTerm*VT100.Translations: #override\n\
+        Shift <KeyPress> Insert: insert-selection(SELECT)\n\
+        Ctrl Shift <Key>V: insert-selection(SELECT)\n\
+        Ctrl Shift <Key>C: copy-selection(SELECT)\n\
+        Ctrl <Key> minus: smaller-vt-font()\n\
+        Ctrl <Key> plus: larger-vt-font()\n\
+        Ctrl <Key> 0: set-vt-font(d)
+
+XTerm*renderFont: true
+XTerm.vt100.saveLines: 4096
+XTerm*selectToClipboard: true
+
+xterm*termName: xterm-256color
+xterm*VT100*BackarrowKey:       true
+xterm*VT100*DeleteIsDel:        true
+
+Xft.antialias:  1
+Xft.hinting:    1
+Xft.hintstyle:  hintfull
+Xft.lcdfilter:  lcddefault
+Xft.rgba:       rgb
+
+!! URxvt Setup
+! urxvt.font: xft:FantasqueSansMono:size=11
+! URxvt*background: honeydew
+URxvt*antialias: true
+URxvt*hinting: true
+
+urxvt.perl-ext-common: default,matcher,resize-font,keyboard-select
+
+! Resize Fonts
+URxvt.keysym.C-minus:     resize-font:smaller
+URxvt.keysym.C-plus:      resize-font:bigger
+URxvt.keysym.C-equal:     resize-font:reset
+URxvt.keysym.C-question:  resize-font:show
+URxvt.resize-font.step:   1
+
+! Keyboard select
+URxvt.keysym.M-q:         perl:keyboard-select:activate
+
+! Matcher
+URxvt.url-launcher:       firefox
+URxvt.matcher.button:     1
