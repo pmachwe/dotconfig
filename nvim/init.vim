@@ -6,7 +6,7 @@ call plug#begin()
 " :FZF :Files :Buffers :Tags :Marks
 Plug 'https://github.com/junegunn/fzf.git', { 'do': { -> fzf#install() } }
 Plug 'https://github.com/junegunn/fzf.vim.git'           
-source plugin-setup/fzf.vim
+runtime plugin-setup/fzf.vim
 " }}}}
 
 " Simple tweaks {{{{
@@ -35,7 +35,7 @@ let g:sneak#label = 1
 " Plug 'https://github.com/vim-airline/vim-airline.git'    " Nicer status bar
 
 Plug 'https://github.com/itchyny/lightline.vim.git'      " Lighter status bar
-source plugin-setup/lightline.vim
+runtime plugin-setup/lightline.vim
 " }}}}
 
 " Programming {{{{
@@ -50,6 +50,15 @@ Plug 'https://github.com/jiangmiao/auto-pairs.git', { 'for' : ['c', 'cpp', 'h', 
 Plug 'https://github.com/tpope/vim-dispatch.git'         " :Make :Start
 Plug 'https://github.com/preservim/nerdtree.git', { 'on': 'NERDTreeToggle' }
 Plug 'https://github.com/vimwiki/vimwiki.git'
+
+Plug 'https://github.com/christoomey/vim-tmux-navigator.git'
+
+" let g:tmux_navigator_no_mappings = 1
+nnoremap <silent> <A-h> :TmuxNavigateLeft<cr>
+nnoremap <silent> <A-j> :TmuxNavigateDown<cr>
+nnoremap <silent> <A-k> :TmuxNavigateUp<cr>
+nnoremap <silent> <A-l> :TmuxNavigateRight<cr>
+nnoremap <silent> <A-\> :TmuxNavigatePrevious<cr>
 " }}}}
 
 " TBD {{{{
@@ -122,10 +131,10 @@ nnoremap <c-p> :cprevious<CR>
 " }}}}
 
 " Window motion for all modes {{{{
-map <A-h> <C-w>h
-map <A-j> <C-w>j
-map <A-k> <C-w>k
-map <A-l> <C-w>l
+" map <A-h> <C-w>h
+" map <A-j> <C-w>j
+" map <A-k> <C-w>k
+" map <A-l> <C-w>l
 " }}}}
 
 " }}}
