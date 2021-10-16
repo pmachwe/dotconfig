@@ -1,6 +1,8 @@
 " Plugins {{{
 
-call plug#begin()
+let g:plugin_path = stdpath('data') . '/plugged'
+
+call plug#begin(g:plugin_path)
 
 " FZF {{{{
 " :FZF :Files :Buffers :Tags :Marks
