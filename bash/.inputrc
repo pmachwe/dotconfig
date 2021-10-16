@@ -1,0 +1,21 @@
+set completion-ignore-case on
+set bell-style none
+set show-all-if-ambiguous on
+
+# Esc-P emulation (emacs mode)
+"\ep": history-search-backward
+"\en": history-search-forward
+
+# Vi Mode
+set editing-mode vi
+set show-mode-in-prompt on
+set vi-ins-mode-string "+"
+set vi-cmd-mode-string ":"
+
+set keymap vi-insert
+"jj" vi-movement-mode # remap escape
+"kk" vi-movement-mode # remap escape
+"ww" vi-movement-mode # remap escape
+"bb" vi-movement-mode # remap escape
+# $if mode==vi
+# $endif
