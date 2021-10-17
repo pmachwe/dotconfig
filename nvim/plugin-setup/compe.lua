@@ -1,3 +1,6 @@
+-- Taken from
+-- https://www.chrisatmachine.com/Neovim/27-native-lsp/
+
 vim.o.completeopt = "menuone,noselect"
 
 require'compe'.setup {
