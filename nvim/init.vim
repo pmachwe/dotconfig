@@ -53,6 +53,10 @@ Plug 'https://github.com/vimwiki/vimwiki.git'
 
 Plug 'https://github.com/christoomey/vim-tmux-navigator.git'
 
+if has('nvim-0.5')
+    Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
+endif
+
 " let g:tmux_navigator_no_mappings = 1
 nnoremap <silent> <A-h> :TmuxNavigateLeft<cr>
 nnoremap <silent> <A-j> :TmuxNavigateDown<cr>
