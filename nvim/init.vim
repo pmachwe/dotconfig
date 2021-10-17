@@ -33,6 +33,10 @@ let g:sneak#label = 1
 " Plug 'https://github.com/arcticicestudio/nord-vim.git'   " Nord theme
 " colorscheme nord
 
+if has('nvim-0.5')
+    Plug 'projekt0n/github-nvim-theme'
+endif
+
 " Plug 'https://github.com/vim-airline/vim-airline.git'    " Nicer status bar
 
 Plug 'https://github.com/itchyny/lightline.vim.git'      " Lighter status bar
@@ -148,6 +152,11 @@ nnoremap <c-p> :cprevious<CR>
 " map <A-l> <C-w>l
 " }}}}
 
+" Plugins {{{{
+map <f8> :NERDTreeToggle<CR>
+map <f7> :TagbarToggle<CR>
+" }}}}
+
 " }}}
 
 " Options {{{
@@ -207,5 +216,7 @@ if has('nvim-0.5')
     luafile plugin-setup/lsp-python.lua
     luafile plugin-setup/compe.lua
 endif
+
+colorscheme github_dimmed
 
 " }}}
