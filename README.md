@@ -4,8 +4,10 @@ This repository contains various configuration files. I am also planning to coll
 
 # Notes
 
+## Nvim
+
 #### LSP
-  - For python, install using `pig install python-lsp-server[all].
+  - For python, install using `pip install python-lsp-server[all]`.
   - For CPP, install `clangd`.
 
 #### Treesitter
