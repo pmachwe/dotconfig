@@ -191,15 +191,15 @@ endif
 
 " Functions {{{
 
-" Taken from :help ins-completion
-function! CleverTab()
-	if strpart( getline('.'), 0, col('.')-1 ) =~ '^\s*$'
-		return "\<Tab>"
-	else
-		return "\<C-N>"
-	endif
-endfunction
-inoremap <Tab> <C-R>=CleverTab()<CR>
+" " Taken from :help ins-completion
+" function! CleverTab()
+" 	if strpart( getline('.'), 0, col('.')-1 ) =~ '^\s*$'
+" 		return "\<Tab>"
+" 	else
+" 		return "\<C-N>"
+" 	endif
+" endfunction
+" inoremap <Tab> <C-R>=CleverTab()<CR>
 
 " }}}
 
@@ -214,9 +214,9 @@ runtime plugin-setup/lightline.vim
 
 if has('nvim-0.5')
     runtime plugin-setup/lspconfig.vim
-    luafile plugin-setup/lsp-cpp.lua
-    luafile plugin-setup/lsp-python.lua
-    luafile plugin-setup/compe.lua
+    runtime plugin-setup/lsp-cpp.lua
+    runtime plugin-setup/lsp-python.lua
+    runtime plugin-setup/compe.lua
 endif
 
 colorscheme github_dimmed
