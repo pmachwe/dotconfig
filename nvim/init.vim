@@ -8,7 +8,6 @@ call plug#begin(g:plugin_path)
 " :FZF :Files :Buffers :Tags :Marks
 Plug 'https://github.com/junegunn/fzf.git', { 'do': { -> fzf#install() } }
 Plug 'https://github.com/junegunn/fzf.vim.git'           
-runtime plugin-setup/fzf.vim
 " }}}}
 
 " Simple tweaks {{{{
@@ -37,7 +36,6 @@ let g:sneak#label = 1
 " Plug 'https://github.com/vim-airline/vim-airline.git'    " Nicer status bar
 
 Plug 'https://github.com/itchyny/lightline.vim.git'      " Lighter status bar
-runtime plugin-setup/lightline.vim
 " }}}}
 
 " Programming {{{{
@@ -61,6 +59,13 @@ nnoremap <silent> <A-j> :TmuxNavigateDown<cr>
 nnoremap <silent> <A-k> :TmuxNavigateUp<cr>
 nnoremap <silent> <A-l> :TmuxNavigateRight<cr>
 nnoremap <silent> <A-\> :TmuxNavigatePrevious<cr>
+" }}}}
+
+" LSP {{{{
+if has('nvim-0.5')
+    Plug 'neovim/nvim-lspconfig'
+    Plug 'hrsh7th/nvim-compe'
+endif
 " }}}}
 
 " TBD {{{{
@@ -186,4 +191,17 @@ inoremap <Tab> <C-R>=CleverTab()<CR>
 " TBD {{{
 " Omnicomplete setup
 " coc-nvim ccls, pyls
+" }}}
+
+" Configuration {{{
+runtime plugin-setup/fzf.vim
+runtime plugin-setup/lightline.vim
+
+if has('nvim-0.5')
+    runtime plugin-setup/lspconfig.vim
+    luafile plugin-setup/lsp-cpp.lua
+    luafile plugin-setup/lsp-python.lua
+    luafile plugin-setup/compe.lua
+endif
+
 " }}}
