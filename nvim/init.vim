@@ -33,13 +33,18 @@ let g:sneak#label = 1
 " Plug 'https://github.com/arcticicestudio/nord-vim.git'   " Nord theme
 " colorscheme nord
 
-if has('nvim-0.5')
-    Plug 'projekt0n/github-nvim-theme'
-endif
-
 " Plug 'https://github.com/vim-airline/vim-airline.git'    " Nicer status bar
 
-Plug 'https://github.com/itchyny/lightline.vim.git'      " Lighter status bar
+if has('nvim-0.5')
+    Plug 'projekt0n/github-nvim-theme'
+    Plug 'hoob3rt/lualine.nvim'
+    " If you want to have icons in your statusline choose one of these
+    Plug 'kyazdani42/nvim-web-devicons'
+    Plug 'ryanoasis/vim-devicons'
+else
+    Plug 'https://github.com/itchyny/lightline.vim.git'      " Lighter status bar
+endif
+
 " }}}}
 
 " Programming {{{{
@@ -210,13 +215,15 @@ endif
 
 " Configuration {{{
 runtime plugin-setup/fzf.vim
-runtime plugin-setup/lightline.vim
 
 if has('nvim-0.5')
     runtime plugin-setup/lspconfig.vim
     runtime plugin-setup/lsp-cpp.lua
     runtime plugin-setup/lsp-python.lua
     runtime plugin-setup/compe.lua
+    runtime plugin-setup/lualine.lua
+else
+    runtime plugin-setup/lightline.vim
 endif
 
 colorscheme github_dimmed
