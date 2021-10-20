@@ -40,8 +40,9 @@ if has('nvim-0.5')
 else
     Plug 'https://github.com/itchyny/lightline.vim.git'      " Lighter status bar
     " Plug 'https://github.com/vim-airline/vim-airline.git'    " Nicer status bar
-    " Plug 'https://github.com/arcticicestudio/nord-vim.git'   " Nord theme
 endif
+
+" Plug 'https://github.com/arcticicestudio/nord-vim.git'   " Nord theme
 
 " }}}}
 
@@ -205,6 +206,7 @@ augroup MyStuff
     autocmd TermOpen * setlocal nonumber norelativenumber
 augroup END
 
+" This opens the file at the last open location
 if has("autocmd")
     au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
 endif
@@ -239,7 +241,7 @@ if has('nvim-0.5')
     runtime plugin-setup/lsp-python.lua
     runtime plugin-setup/compe.lua
     runtime plugin-setup/lualine.lua
-    colorscheme github_dimmed
+    colorscheme github
 else
     runtime plugin-setup/lightline.vim
 endif
