@@ -30,10 +30,6 @@ let g:sneak#label = 1
 " }}}}
 
 " Themes etc {{{{
-" Plug 'https://github.com/arcticicestudio/nord-vim.git'   " Nord theme
-" colorscheme nord
-
-" Plug 'https://github.com/vim-airline/vim-airline.git'    " Nicer status bar
 
 if has('nvim-0.5')
     Plug 'projekt0n/github-nvim-theme'
@@ -43,6 +39,8 @@ if has('nvim-0.5')
     Plug 'ryanoasis/vim-devicons'
 else
     Plug 'https://github.com/itchyny/lightline.vim.git'      " Lighter status bar
+    " Plug 'https://github.com/vim-airline/vim-airline.git'    " Nicer status bar
+    " Plug 'https://github.com/arcticicestudio/nord-vim.git'   " Nord theme
 endif
 
 " }}}}
@@ -227,11 +225,9 @@ if has('nvim-0.5')
     runtime plugin-setup/lsp-python.lua
     runtime plugin-setup/compe.lua
     runtime plugin-setup/lualine.lua
+    colorscheme github_dimmed
 else
     runtime plugin-setup/lightline.vim
 endif
 
-colorscheme github_dimmed
-
 " }}}
-
