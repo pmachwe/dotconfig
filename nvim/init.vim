@@ -128,6 +128,11 @@ nnoremap U <C-u>
 nnoremap D <C-d>
 " }}}}
 
+" Basic utilities {{{{
+nnoremap o o<Esc>
+nnoremap O O<Esc>
+" }}}}
+"
 " Tags Emacs style {{{{
 nnoremap <A-.> <C-]>
 nnoremap <A-,> <C-t>
@@ -229,3 +234,4 @@ endif
 colorscheme github_dimmed
 
 " }}}
+
