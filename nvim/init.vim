@@ -90,11 +90,7 @@ call plug#end()
 " {{{ Mappings
 
 let mapleader = ","
-map <leader>k :bd<CR>
-map <leader>o :only<CR>
-nnoremap <leader>i :e ~/.config/nvim/init.vim<CR>
 nnoremap ; :
-inoremap ;; <Esc>:w<CR>
 
 " Better ways to escape {{{{
 " Double press most used motion keys
@@ -130,6 +126,15 @@ nnoremap D <C-d>
 " Basic utilities {{{{
 nnoremap o o<Esc>
 nnoremap O O<Esc>
+
+inoremap <leader>w <Esc>:w<CR>
+nnoremap <leader>w :w<CR>
+
+nnoremap <leader>i :e ~/.config/nvim/init.vim<CR>
+
+nnoremap <leader>k :bd<CR>
+nnoremap <leader>o :only<CR>
+
 " }}}}
 "
 " Tags Emacs style {{{{
