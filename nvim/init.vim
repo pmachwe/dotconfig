@@ -94,7 +94,7 @@ call plug#end()
 let mapleader = ","
 map <leader>k :bd<CR>
 map <leader>o :only<CR>
-inoremap ,i :e ~/.config/nvim/init.vim<CR>
+nnoremap <leader>i :e ~/.config/nvim/init.vim<CR>
 nnoremap ; :
 
 " Better ways to escape {{{{
