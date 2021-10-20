@@ -169,6 +169,14 @@ nnoremap <c-p> :cprevious<CR>
 " Plugins {{{{
 map <f8> :NERDTreeToggle<CR>
 map <f7> :TagbarToggle<CR>
+
+nnoremap ,Ga :Git add %<CR>
+nnoremap ,GA :Git add
+nnoremap ,Gc :Git commit<CR>
+nnoremap ,Gd :Git diff<CR>
+nnoremap ,Gp :Git push<CR>
+nnoremap ,GG :Git add % <bar> Git commit<CR>
+
 " }}}}
 
 " }}}
