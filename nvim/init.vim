@@ -94,6 +94,7 @@ map <leader>k :bd<CR>
 map <leader>o :only<CR>
 nnoremap <leader>i :e ~/.config/nvim/init.vim<CR>
 nnoremap ; :
+inoremap ;; <Esc>:w<CR>
 
 " Better ways to escape {{{{
 " Double press most used motion keys
