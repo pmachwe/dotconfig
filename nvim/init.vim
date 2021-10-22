@@ -65,12 +65,6 @@ if has('nvim-0.5')
     Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 endif
 
-" let g:tmux_navigator_no_mappings = 1
-nnoremap <silent> <A-h> :TmuxNavigateLeft<cr>
-nnoremap <silent> <A-j> :TmuxNavigateDown<cr>
-nnoremap <silent> <A-k> :TmuxNavigateUp<cr>
-nnoremap <silent> <A-l> :TmuxNavigateRight<cr>
-nnoremap <silent> <A-\> :TmuxNavigatePrevious<cr>
 " }}}}
 
 " LSP {{{{
@@ -234,6 +228,8 @@ endif
 
 " Configuration {{{
 runtime plugin-setup/fzf.vim
+runtime plugin-setup/vimwiki.vim
+runtime plugin-setup/tmux-navigator.vim
 
 if has('nvim-0.5')
     runtime plugin-setup/lspconfig.vim
@@ -245,5 +241,5 @@ if has('nvim-0.5')
 else
     runtime plugin-setup/lightline.vim
 endif
-
+ 
 " }}}
