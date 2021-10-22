@@ -31,3 +31,18 @@ Fantastic video explaining the various types of registers in Vim as well has som
 
 ## Bash
 
+## Tmux
+
+### [Tmux Plugin Manager](https://github.com/tmux-plugins/tpm)
+
+To setup TMUX plugin mananger:
+
+```
+git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+```
+and add the plugins to the `.tmux.conf` and add the add the following line at the end:
+```
+run '~/.tmux/plugins/tpm/tpm'
+```
+
+Now, source the configuration and then call `prefix I` to install the plugin.
