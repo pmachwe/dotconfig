@@ -50,7 +50,7 @@ endif
 Plug 'https://github.com/preservim/tagbar.git'           " :TagbarToggle
 Plug 'https://github.com/tpope/vim-fugitive.git'         " :Git diff|commit
 Plug 'https://github.com/ngemily/vim-vp4.git'
-Plug 'https://github.com/jiangmiao/auto-pairs.git', { 'for' : ['c', 'cpp', 'h', 'pl', 'cxx', 'ief'] }    " Auto close brackets etc
+Plug 'https://github.com/jiangmiao/auto-pairs.git', { 'for' : ['c', 'cpp', 'h', 'pl', 'cxx', 'ief', 'py', 'sh', 'awk'] }    " Auto close brackets etc
 " Plug 'https://github.com/airblade/vim-rooter.git'        " Find project root
 " }}}}
 
@@ -119,8 +119,8 @@ nnoremap D <C-d>
 " }}}}
 
 " Basic utilities {{{{
-nnoremap o o<Esc>
-nnoremap O O<Esc>
+" nnoremap o o<Esc>
+" nnoremap O O<Esc>
 
 inoremap <leader>w <Esc>:w<CR>
 nnoremap <leader>w :w<CR>
@@ -242,4 +242,6 @@ else
     runtime plugin-setup/lightline.vim
 endif
  
+runtime local.vim
+
 " }}}
