@@ -130,6 +130,10 @@ nnoremap <leader>i :e ~/.config/nvim/init.vim<CR>
 nnoremap <leader>k :bd<CR>
 nnoremap <leader>o :only<CR>
 
+" Avoid quitting by mistake
+cabbrev q <c-r>=(getcmdtype()==':' && getcmdpos()==1 ? 'bd' : 'q')<CR>
+cabbrev Q <c-r>=(getcmdtype()==':' && getcmdpos()==1 ? 'quit' : 'Q')<CR>
+
 " }}}}
 "
 " Tags Emacs style {{{{
@@ -245,3 +249,4 @@ endif
 runtime local.vim
 
 " }}}
+
