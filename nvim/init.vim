@@ -186,7 +186,7 @@ set ts=4
 set shiftwidth=2
 set softtabstop=2
 set expandtab
- set smarttab
+set smarttab
 " set autoindent
 set number
 set relativenumber
