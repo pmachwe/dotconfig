@@ -147,13 +147,13 @@ command! Diffo windo diffoff
 " }}}}
 
 " QuickFix {{{{
-nnoremap <leader>co :copen<CR>
-nnoremap <leader>cc :cclose<CR>
-nnoremap <leader>cn :cnext<CR>
-nnoremap <leader>cp :cprevious<CR>
-nnoremap <leader>cl :clast<CR>
-nnoremap <leader>cf :cfirst<CR>
-nnoremap <leader>ch :chistory<CR>
+nnoremap <leader>qo :copen<CR>
+nnoremap <leader>qc :cclose<CR>
+nnoremap <leader>qn :cnext<CR>
+nnoremap <leader>qp :cprevious<CR>
+nnoremap <leader>ql :clast<CR>
+nnoremap <leader>qf :cfirst<CR>
+nnoremap <leader>qh :chistory<CR>
 nnoremap <c-n> :cnext<CR>
 nnoremap <c-p> :cprevious<CR>
 " }}}}
@@ -234,6 +234,7 @@ endif
 runtime plugin-setup/fzf.vim
 runtime plugin-setup/vimwiki.vim
 runtime plugin-setup/tmux-navigator.vim
+runtime plugin-setup/cscope.vim
 
 if has('nvim-0.5')
     runtime plugin-setup/lspconfig.vim
@@ -249,4 +250,3 @@ endif
 runtime local.vim
 
 " }}}
-
