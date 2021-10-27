@@ -49,7 +49,7 @@ function! TmuxSwitchFzf()
   function! opts.sink(lines) 
     let data = split(a:lines)
     let window = split(data[0], ":")
-    execute '!tmux switch-client -t ' . window[0]
+    execute 'silent !tmux switch-client -t ' . window[0]
   endfunction
   call fzf#run(opts)
 endfunction
