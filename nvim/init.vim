@@ -194,6 +194,7 @@ set inccommand=split
 set hidden
 set path+=**
 set wildmenu
+set wildmode=list:longest
 
 " }}}
 
