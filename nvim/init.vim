@@ -194,7 +194,9 @@ set inccommand=split
 set hidden
 set path+=**
 set wildmenu
-set wildmode=list:longest
+set wildmode=list:longest,full
+set clipboard+=unnamedplus
+set grepprg=rg\ --vimgrep\ --smart-case\ --follow
 
 " }}}
 
@@ -228,7 +230,9 @@ endif
 
 " TBD {{{
 " Omnicomplete setup
-" coc-nvim ccls, pyls
+" Setup globals for easier use of colors in FZF
+" Setup FZF for p4 commands
+" Setup FZF for grid commands
 " }}}
 
 " Configuration {{{
@@ -248,6 +252,10 @@ else
     runtime plugin-setup/lightline.vim
 endif
  
+if (has("termguicolors"))
+  set termguicolors
+endif
+
 runtime local.vim
 
 " }}}
