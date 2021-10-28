@@ -16,9 +16,10 @@ Plug 'https://github.com/machakann/vim-highlightedyank.git'
 Plug 'nelstrom/vim-visual-star-search'
 Plug 'https://github.com/haya14busa/is.vim.git'           " Tweak hlsearch
 Plug 'https://github.com/junegunn/vim-easy-align.git'     " vipga= gai= :EasyAlign /REGEX/
+Plug 'https://github.com/easymotion/vim-easymotion.git'
 
-Plug 'https://github.com/justinmk/vim-sneak.git'          " Simpler jump than easymotion
-let g:sneak#label = 1
+" Plug 'https://github.com/justinmk/vim-sneak.git'          " Simpler jump than easymotion
+" let g:sneak#label = 1
 
 " Plug 'https://github.com/unblevable/quick-scope.git'     " Better forward motion using f/F/t/T
 " Trigger a highlight in the appropriate direction when pressing these keys:
@@ -38,6 +39,7 @@ if has('nvim-0.5')
     Plug 'kyazdani42/nvim-web-devicons'
     Plug 'ryanoasis/vim-devicons'
 else
+    Plug 'https://github.com/rakr/vim-one.git'
     Plug 'https://github.com/itchyny/lightline.vim.git'      " Lighter status bar
     " Plug 'https://github.com/vim-airline/vim-airline.git'    " Nicer status bar
 endif
@@ -241,6 +243,7 @@ runtime plugin-setup/fzf.vim
 runtime plugin-setup/vimwiki.vim
 runtime plugin-setup/tmux-navigator.vim
 runtime plugin-setup/cscope.vim
+runtime plugin-setup/easymotion.vim
 
 if has('nvim-0.5')
     runtime plugin-setup/lspconfig.vim
@@ -251,6 +254,7 @@ if has('nvim-0.5')
     colorscheme github
 else
     runtime plugin-setup/lightline.vim
+    colorsheme one
 endif
  
 if (has("termguicolors"))
