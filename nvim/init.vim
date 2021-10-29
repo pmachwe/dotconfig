@@ -254,7 +254,7 @@ if has('nvim-0.5')
     colorscheme github
 else
     runtime plugin-setup/lightline.vim
-    colorsheme one
+    colorscheme one
 endif
  
 if (has("termguicolors"))
