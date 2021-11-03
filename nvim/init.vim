@@ -55,14 +55,18 @@ Plug 'https://github.com/jreybert/vimagit.git'           " Emacs Magit
 Plug 'https://github.com/ngemily/vim-vp4.git'
 Plug 'https://github.com/jiangmiao/auto-pairs.git', { 'for' : ['c', 'cpp', 'h', 'pl', 'cxx', 'ief', 'py', 'sh', 'awk'] }    " Auto close brackets etc
 " Plug 'https://github.com/airblade/vim-rooter.git'        " Find project root
+" Track the engine.
+Plug 'SirVer/ultisnips'
+" Snippets are separated from the engine. Add this if you want them:
+Plug 'honza/vim-snippets'
 " }}}}
 
 " Utilities {{{{
 Plug 'https://github.com/tpope/vim-dispatch.git'         " :Make :Start
 Plug 'https://github.com/preservim/nerdtree.git', { 'on': 'NERDTreeToggle' }
 Plug 'https://github.com/vimwiki/vimwiki.git'
-
 Plug 'https://github.com/christoomey/vim-tmux-navigator.git'
+Plug 'https://github.com/junegunn/vim-peekaboo.git'      " Peek registers
 
 if has('nvim-0.5')
     Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
