@@ -33,6 +33,10 @@ Fantastic video explaining the various types of registers in Vim as well has som
 
 ## Tmux
 
+### [The Tao of Tmux](https://leanpub.com/the-tao-of-tmux/read)
+
+This is an excellent resource to understand the workings and configuration for `Tmux`.
+
 ### [Tmux Plugin Manager](https://github.com/tmux-plugins/tpm)
 
 To setup TMUX plugin mananger:
