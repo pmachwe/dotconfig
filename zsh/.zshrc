@@ -18,11 +18,17 @@ d='dirs -v | head -10'
 8='cd -8'
 9='cd -9'
 
-alias -g G='| grep --color=auto '
+alias -g G='| egrep --color=auto --line-number '
+alias -g Z='| zegrep --color=auto --line-number '
 alias -g B='| bat'
 alias -g L='| less'
 alias -g N='| nvim -'
+alias -g X='| xargs '
 
 alias n=nvim
-
+alias g='grep --color=auto'
 export EDITOR=nvim
+
+function Man {
+  nvim -c "Man $1 | only"
+}
