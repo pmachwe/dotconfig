@@ -1,6 +1,8 @@
 setopt autocd autopushd pushdignoredups
 unsetopt beep
 bindkey -v
+bindkey -M viins 'jj' vi-cmd-mode
+bindkey -M viins 'kk' vi-cmd-mode
 
 autoload -Uz compinit
 compinit
@@ -32,3 +34,7 @@ export EDITOR=nvim
 function Man {
   nvim -c "Man $1 | only"
 }
+
+if [[ -f ~/.local.zsh ]]; then
+  source ~/.local.zsh
+fi
