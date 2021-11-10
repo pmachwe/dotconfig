@@ -53,7 +53,7 @@ Plug 'https://github.com/preservim/tagbar.git'           " :TagbarToggle
 Plug 'https://github.com/tpope/vim-fugitive.git'         " :Git diff|commit
 Plug 'https://github.com/jreybert/vimagit.git'           " Emacs Magit
 Plug 'https://github.com/ngemily/vim-vp4.git'
-Plug 'https://github.com/jiangmiao/auto-pairs.git', { 'for' : ['c', 'cpp', 'h', 'pl', 'cxx', 'ief', 'py', 'sh', 'awk'] }    " Auto close brackets etc
+Plug 'https://github.com/jiangmiao/auto-pairs.git', { 'for' : ['c', 'cpp', 'h', 'pl', 'cxx', 'ief', 'py', 'sh', 'awk', 'rs'] }    " Auto close brackets etc
 " Plug 'https://github.com/airblade/vim-rooter.git'        " Find project root
 " Track the engine.
 Plug 'SirVer/ultisnips'
@@ -253,6 +253,7 @@ if has('nvim-0.5')
     runtime plugin-setup/lspconfig.vim
     runtime plugin-setup/lsp-cpp.lua
     runtime plugin-setup/lsp-python.lua
+    runtime plugin-setup/lsp-rust.lua
     runtime plugin-setup/compe.lua
     runtime plugin-setup/lualine.lua
     colorscheme github
