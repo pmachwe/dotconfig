@@ -247,6 +247,7 @@ runtime plugin-setup/vimwiki.vim
 runtime plugin-setup/tmux-navigator.vim
 runtime plugin-setup/cscope.vim
 runtime plugin-setup/easymotion.vim
+runtime plugin-setup/p4.vim
 
 if has('nvim-0.5')
     runtime plugin-setup/lspconfig.vim
