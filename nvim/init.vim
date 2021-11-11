@@ -107,15 +107,14 @@ inoremap kj <Esc>
 
 " Buffer maniputlation {{{{
 " map <leader><leader> :b <C-d>
-nnoremap <leader><leader> :bprevious<CR>
-nnoremap <leader>.        :bnext<CR>
+nnoremap <leader>.        :b#<CR>
 
 nnoremap <A-n>            :tabnext<CR>
 nnoremap <A-p>            :tabprevious<CR>
 
 " Taken from
 " https://stackoverflow.com/questions/1708623/opening-files-in-the-same-folder-as-the-current-file-in-vim
-nnoremap ,e :find <C-R>=expand("%:p:h") . "/" <CR>
+nnoremap ,e :edit <C-R>=expand("%:p:h") . "/" <CR>
 nnoremap ,t :tabe <C-R>=expand("%:p:h") . "/" <CR>
 nnoremap ,s :split <C-R>=expand("%:p:h") . "/" <CR>
 " }}}}
@@ -126,8 +125,8 @@ nnoremap D <C-d>
 " }}}}
 
 " Basic utilities {{{{
-" nnoremap o o<Esc>
-" nnoremap O O<Esc>
+nnoremap <A-o> o<Esc>
+nnoremap <A-O> O<Esc>
 
 inoremap <leader>w <Esc>:w<CR>
 nnoremap <leader>w :w<CR>
