@@ -13,9 +13,14 @@ nnoremap <silent> <C-p> <cmd>lua vim.lsp.diagnostic.goto_next()<CR>L
 
 " auto-format
 autocmd BufWritePre *.py lua vim.lsp.buf.formatting_sync(nil, 100)
-autocmd BufWritePre *.cpp lua vim.lsp.buf.formatting_sync(nil, 100)
-autocmd BufWritePre *.cc lua vim.lsp.buf.formatting_sync(nil, 100)
-autocmd BufWritePre *.cxx lua vim.lsp.buf.formatting_sync(nil, 100)
-autocmd BufWritePre *.c lua vim.lsp.buf.formatting_sync(nil, 100)
-autocmd BufWritePre *.h lua vim.lsp.buf.formatting_sync(nil, 100)
 autocmd BufWritePre *.sh lua vim.lsp.buf.formatting_sync(nil, 100)
+autocmd BufWritePre *.rs lua vim.lsp.buf.formatting_sync(nil, 100)
+autocmd BufWritePre *.awk lua vim.lsp.buf.formatting_sync(nil, 100)
+
+if !filereadable(expand('~/.work_machine'))
+  autocmd BufWritePre *.cpp lua vim.lsp.buf.formatting_sync(nil, 100)
+  autocmd BufWritePre *.cc lua vim.lsp.buf.formatting_sync(nil, 100)
+  autocmd BufWritePre *.cxx lua vim.lsp.buf.formatting_sync(nil, 100)
+  autocmd BufWritePre *.c lua vim.lsp.buf.formatting_sync(nil, 100)
+  autocmd BufWritePre *.h lua vim.lsp.buf.formatting_sync(nil, 100)
+endif
