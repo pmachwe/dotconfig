@@ -6,7 +6,7 @@ let g:fzf_action = {
 
 let g:fzf_history_dir = '~/.local/share/fzf-history'
 " let g:fzf_preview_window = ['down:40%', 'ctrl-/']
-let g:fzf_layout = { 'down': '30%' }
+" let g:fzf_layout = { 'down': '30%' }
 
 let $FZF_DEFAULT_OPTS = '--layout=reverse --info=inline'
 let $FZF_DEFAULT_COMMAND="rg --files --hidden"
@@ -23,6 +23,7 @@ nnoremap <leader>h :FzfHistory<CR>
 nnoremap <leader>? :FzfHistory/<CR>
 nnoremap <leader>h :FzfHistory<CR>
 nnoremap <leader>H :FzfHelpTags<CR>
+nnoremap <leader>/ :FzfBLines<CR>
 
 map <A-f> :FzfFiles<CR>
 map <A-b> :FzfBuffers<CR>
