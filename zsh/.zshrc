@@ -10,6 +10,7 @@ compinit
 PROMPT=$'%F{cyan}%m%f%F{cyan} \U00B7 %f%F{cyan}%f%F{cyan}%2~%f%F{cyan} \U279C %f'
 
 alias d='dirs -v | head -10'
+alias ls='ls -F'
 
 alias -g G='| egrep --color=auto --line-number '
 alias -g Z='| zegrep --color=auto --line-number '
