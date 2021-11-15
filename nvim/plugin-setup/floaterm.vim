@@ -1,0 +1,10 @@
+nnoremap \t :FloatermToggle<CR>
+nnoremap \n :FloatermNew 
+nnoremap \j :FloatermNext<CR>
+nnoremap \j :FloatermPrev<CR>
+nnoremap \k :FloatermKill<CR>
+tnoremap \t <C-\><C-n>:FloatermToggle<CR>
+tnoremap \n <C-\><C-n>:FloatermNew 
+tnoremap \j <C-\><C-n>:FloatermNext<CR>
+tnoremap \j <C-\><C-n>:FloatermPrev<CR>
+tnoremap \k <C-\><C-n>:FloatermKill<CR>

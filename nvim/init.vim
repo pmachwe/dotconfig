@@ -81,8 +81,8 @@ if has('nvim-0.5')
 endif
 " }}}}
 
-" TBD {{{{
-" Plug 'neoclide/coc.nvim', {'branch': 'release'}
+" Trying {{{{
+Plug 'https://github.com/voldikss/vim-floaterm.git'
 " }}}}
 
 call plug#end()
@@ -103,6 +103,7 @@ inoremap bb <Esc>
 inoremap ww <Esc>
 inoremap jk <Esc>
 inoremap kj <Esc>
+tnoremap <Esc> <C-\><C-n>
 " }}}}
 
 " Buffer maniputlation {{{{
