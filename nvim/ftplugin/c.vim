@@ -38,3 +38,5 @@ nnoremap <buffer> <Leader>cC :CscopeFindCallers<SPACE>
 nnoremap <buffer> <Leader>cF :CscopeFindFile<SPACE>
 nnoremap <buffer> <Leader>cT :CscopeFindTextString<SPACE>
 nnoremap <buffer> <Leader>cS :CscopeFindSymbol<SPACE>
+
+nnoremap <buffer> K :call ftplugin#c#PreviewTagToggle()<CR>
