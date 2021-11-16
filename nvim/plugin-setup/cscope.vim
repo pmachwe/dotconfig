@@ -18,7 +18,6 @@ function! Cscope(option, query)
   \ 'options': ['--ansi', '--prompt', '> ',
   \             '--multi', '--bind', 'alt-a:select-all,alt-d:deselect-all',
   \             '--color', 'fg:188,fg+:222,bg+:#3a3a3a,hl+:104'],
-  \ 'down': '40%'
   \ }
   function! opts.sink(lines) 
     let data = split(a:lines)
@@ -27,6 +26,7 @@ function! Cscope(option, query)
   endfunction
   call fzf#run(opts)
 endfunction
+  " \ 'down': '40%'
 
 nnoremap <leader>cs :call Cscope("s", "<C-R><C-W>")<CR>
 nnoremap <leader>cg :call Cscope("g", "<C-R><C-W>")<CR>
