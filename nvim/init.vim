@@ -169,6 +169,7 @@ runtime plugin-setup/tmux-navigator.vim
 runtime plugin-setup/cscope.vim
 runtime plugin-setup/easymotion.vim
 runtime plugin-setup/p4.vim
+runtime plugin-setup/floaterm.vim
 
 runtime local.vim
 
