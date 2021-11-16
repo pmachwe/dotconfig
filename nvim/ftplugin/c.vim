@@ -17,10 +17,5 @@ let OmniCpp_ShowAccess          = 1 "show access in pop-up
 let OmniCpp_SelectFirstItem     = 1 "select first item in pop-up
 set completeopt=menuone,menu,longest
 
-function! UpdateTags()
-  execute ":!ctags -R --c++-kinds=+p --fields=+iaS --extra=+q ./"
-  echohl StatusLine | echo "C/C++ tag updated" | echohl None
-endfunction
-
 nnoremap <buffer> <F4> :call UpdateTags()
 nnoremap <buffer> <F5> :make<CR>
