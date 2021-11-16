@@ -41,7 +41,7 @@ nnoremap <leader>ca :call Cscope("a", "<C-R><C-W>")<CR>
 nnoremap gr :call Cscope("s", "<C-R><C-W>")<CR>
 nnoremap gd :call Cscope("g", "<C-R><C-W>")<CR>
 
-nnoremap <leader><leader>cs :cscope find s <C-R><C-W><CR>
+" nnoremap <leader><leader>cs :cscope find s <C-R><C-W><CR>
 
 command! -bang -nargs=* CscopeFindAssignments   call Cscope("a", <q-args>)
 command! -bang -nargs=* CscopeFindCallers       call Cscope("c", <q-args>)
