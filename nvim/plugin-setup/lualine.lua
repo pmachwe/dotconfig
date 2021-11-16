@@ -1,4 +1,4 @@
 require('lualine').setup{
-    options = {theme = 'nord'},
+    options = {theme = 'tokyonight'},
     extensions = {'quickfix', 'fzf', 'nerdtree'}
 }

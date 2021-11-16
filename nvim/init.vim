@@ -39,6 +39,8 @@ if has('nvim-0.5')
     " If you want to have icons in your statusline choose one of these
     Plug 'kyazdani42/nvim-web-devicons'
     Plug 'ryanoasis/vim-devicons'
+    Plug 'EdenEast/nightfox.nvim'
+    Plug 'folke/tokyonight.nvim', { 'branch': 'main' }
 else
     Plug 'https://github.com/rakr/vim-one.git'
     Plug 'https://github.com/itchyny/lightline.vim.git'      " Lighter status bar
@@ -153,7 +155,7 @@ if has('nvim-0.5')
     runtime plugin-setup/lsp-rust.lua
     runtime plugin-setup/compe.lua
     runtime plugin-setup/lualine.lua
-    colorscheme github
+    colorscheme tokyonight
 else
     runtime plugin-setup/lightline.vim
     colorscheme one
