@@ -1,6 +1,7 @@
 " Plugins {{{
 
 let g:plugin_path = stdpath('data') . '/plugged'
+let mapleader = ","
 
 call plug#begin(g:plugin_path)
 
@@ -89,9 +90,92 @@ call plug#end()
 
 "}}}
 
+" Options {{{
+set foldmethod=marker
+set ts=4
+set shiftwidth=2
+set softtabstop=2
+set expandtab
+set smarttab
+" set autoindent
+set number
+set relativenumber
+set inccommand=split
+set hidden
+set path+=**
+set wildmenu
+set wildmode=list:longest,full
+set clipboard+=unnamedplus
+set grepprg=rg\ --vimgrep\ --smart-case\ --follow
+
+" }}}
+
+" Autocmd {{{
+
+augroup MyStuff
+    autocmd!
+    autocmd TermOpen * setlocal nonumber norelativenumber
+augroup END
+
+" This opens the file at the last open location
+if has("autocmd")
+    au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
+endif
+
+" }}}
+
+" Functions {{{
+
+" " Taken from :help ins-completion
+" function! CleverTab()
+" 	if strpart( getline('.'), 0, col('.')-1 ) =~ '^\s*$'
+" 		return "\<Tab>"
+" 	else
+" 		return "\<C-N>"
+" 	endif
+" endfunction
+" inoremap <Tab> <C-R>=CleverTab()<CR>
+
+" }}}
+
+" TBD {{{
+" Omnicomplete setup
+" Setup globals for easier use of colors in FZF
+" Setup FZF for p4 commands
+" Setup FZF for grid commands
+" }}}
+
+" Configuration {{{
+if has('nvim-0.5')
+    runtime plugin-setup/lspconfig.vim
+    runtime plugin-setup/lsp-cpp.lua
+    runtime plugin-setup/lsp-python.lua
+    runtime plugin-setup/lsp-rust.lua
+    runtime plugin-setup/compe.lua
+    runtime plugin-setup/lualine.lua
+    colorscheme github
+else
+    runtime plugin-setup/lightline.vim
+    colorscheme one
+endif
+ 
+if (has("termguicolors"))
+  set termguicolors
+endif
+
+runtime plugin-setup/fzf.vim
+runtime plugin-setup/vimwiki.vim
+runtime plugin-setup/tmux-navigator.vim
+runtime plugin-setup/cscope.vim
+runtime plugin-setup/easymotion.vim
+runtime plugin-setup/p4.vim
+
+runtime local.vim
+
+" }}}
+
 " {{{ Mappings
 
-let mapleader = ","
 nnoremap ; :
 
 " Better ways to escape {{{{
@@ -187,86 +271,3 @@ nnoremap ,GG :Git add % <bar> Git commit<CR>
 
 " }}}
 
-" Options {{{
-set foldmethod=marker
-set ts=4
-set shiftwidth=2
-set softtabstop=2
-set expandtab
-set smarttab
-" set autoindent
-set number
-set relativenumber
-set inccommand=split
-set hidden
-set path+=**
-set wildmenu
-set wildmode=list:longest,full
-set clipboard+=unnamedplus
-set grepprg=rg\ --vimgrep\ --smart-case\ --follow
-
-" }}}
-
-" Autocmd {{{
-
-augroup MyStuff
-    autocmd!
-    autocmd TermOpen * setlocal nonumber norelativenumber
-augroup END
-
-" This opens the file at the last open location
-if has("autocmd")
-    au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
-endif
-
-" }}}
-
-" Functions {{{
-
-" " Taken from :help ins-completion
-" function! CleverTab()
-" 	if strpart( getline('.'), 0, col('.')-1 ) =~ '^\s*$'
-" 		return "\<Tab>"
-" 	else
-" 		return "\<C-N>"
-" 	endif
-" endfunction
-" inoremap <Tab> <C-R>=CleverTab()<CR>
-
-" }}}
-
-" TBD {{{
-" Omnicomplete setup
-" Setup globals for easier use of colors in FZF
-" Setup FZF for p4 commands
-" Setup FZF for grid commands
-" }}}
-
-" Configuration {{{
-runtime plugin-setup/fzf.vim
-runtime plugin-setup/vimwiki.vim
-runtime plugin-setup/tmux-navigator.vim
-runtime plugin-setup/cscope.vim
-runtime plugin-setup/easymotion.vim
-runtime plugin-setup/p4.vim
-
-if has('nvim-0.5')
-    runtime plugin-setup/lspconfig.vim
-    runtime plugin-setup/lsp-cpp.lua
-    runtime plugin-setup/lsp-python.lua
-    runtime plugin-setup/lsp-rust.lua
-    runtime plugin-setup/compe.lua
-    runtime plugin-setup/lualine.lua
-    colorscheme github
-else
-    runtime plugin-setup/lightline.vim
-    colorscheme one
-endif
- 
-if (has("termguicolors"))
-  set termguicolors
-endif
-
-runtime local.vim
-
-" }}}
