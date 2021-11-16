@@ -11,6 +11,8 @@ function cscope#cscope#Cscope(option, query)
     let color = '{ x = $1; $1 = ""; z = $3; $3 = ""; printf "\033[35m%s\033[0m:\033[32m%s:\033[0m\011\033[30m%s\033[0m\n", x,z,$0; }'
   endif
   let cmd = "cscope -dL" . codes[a:option] . " " . a:query . " | awk '" . color . "'"
-  call fzf#vim#grep(cmd, 1, fzf#vim#with_preview())
+  " second argument is 0 as cscope does not provide columns
+  " fourth argument is 1 which means show fullscreen
+  call fzf#vim#grep(cmd, 0, fzf#vim#with_preview({'options': ['--select-1']}), 1)
 endfunction
 
