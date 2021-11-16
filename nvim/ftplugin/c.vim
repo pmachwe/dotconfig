@@ -8,16 +8,14 @@ compiler gcc
 setlocal makeprg=g++\ --std=c++17\ -o\ %:r\ %
 
 " Taken from https://aufather.wordpress.com/2010/08/26/omni-completion-in-vim/
-if !has('nvim-0.5')
-  set omnifunc=syntaxcomplete#Complete " override built-in C omnicomplete with C++ OmniCppComplete plugin
-  let OmniCpp_GlobalScopeSearch   = 1
-  let OmniCpp_DisplayMode         = 1
-  let OmniCpp_ShowScopeInAbbr     = 0 "do not show namespace in pop-up
-  let OmniCpp_ShowPrototypeInAbbr = 1 "show prototype in pop-up
-  let OmniCpp_ShowAccess          = 1 "show access in pop-up
-  let OmniCpp_SelectFirstItem     = 1 "select first item in pop-up
-  set completeopt=menuone,menu,longest
-endif
+set omnifunc=syntaxcomplete#Complete " override built-in C omnicomplete with C++ OmniCppComplete plugin
+let OmniCpp_GlobalScopeSearch   = 1
+let OmniCpp_DisplayMode         = 1
+let OmniCpp_ShowScopeInAbbr     = 0 "do not show namespace in pop-up
+let OmniCpp_ShowPrototypeInAbbr = 1 "show prototype in pop-up
+let OmniCpp_ShowAccess          = 1 "show access in pop-up
+let OmniCpp_SelectFirstItem     = 1 "select first item in pop-up
+set completeopt=menuone,menu,longest
 
 function! UpdateTags()
   execute ":!ctags -R --c++-kinds=+p --fields=+iaS --extra=+q ./"
