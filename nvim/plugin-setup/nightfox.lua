@@ -15,3 +15,5 @@ nightfox.setup({
     search = false
   }
 })
+
+nightfox.load()
