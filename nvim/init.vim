@@ -196,7 +196,7 @@ tnoremap <Esc> <C-\><C-n>
 
 " Buffer maniputlation {{{{
 " map <leader><leader> :b <C-d>
-nnoremap <leader>,        :b#<CR>
+nnoremap <leader>.        :b#<CR>
 nnoremap <A-n>            :tabnext<CR>
 nnoremap <A-p>            :tabprevious<CR>
 
