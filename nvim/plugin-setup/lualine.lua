@@ -7,7 +7,7 @@ local function GetP4Client()
 end
 
 require('lualine').setup {
-  options = {theme = 'tokyonight'},
+  options = {theme = 'nightfox'},
   extensions = {'quickfix', 'fzf', 'nerdtree'},
   sections = {
     lualine_c = {'filename', GetCurrFunc},

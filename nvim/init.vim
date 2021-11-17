@@ -155,7 +155,8 @@ if has('nvim-0.5')
     runtime plugin-setup/lsp-rust.lua
     runtime plugin-setup/compe.lua
     runtime plugin-setup/lualine.lua
-    colorscheme tokyonight
+    runtime plugin-setup/nightfox.lua
+    colorscheme nightfox
 else
     runtime plugin-setup/lightline.vim
     colorscheme one
