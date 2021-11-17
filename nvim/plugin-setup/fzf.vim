@@ -45,7 +45,7 @@ function! TmuxSwitchFzf()
   \ 'options': ['--ansi', '--prompt', '> ',
   \             '--multi', '--bind', 'alt-a:select-all,alt-d:deselect-all',
   \             '--color', 'fg:188,fg+:222,bg+:#3a3a3a,hl+:104'],
-  \ 'down': '40%'
+  \ 'down': '20%'
   \ }
   function! opts.sink(lines) 
     let data = split(a:lines)
