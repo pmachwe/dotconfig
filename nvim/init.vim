@@ -77,10 +77,16 @@ endif
 
 " }}}}
 
-" LSP {{{{
+" LSP and Completion {{{{
 if has('nvim-0.5')
     Plug 'neovim/nvim-lspconfig'
-    Plug 'hrsh7th/nvim-compe'
+    " Plug 'hrsh7th/nvim-compe'
+    Plug 'hrsh7th/cmp-nvim-lsp'
+    Plug 'hrsh7th/cmp-buffer'
+    Plug 'hrsh7th/cmp-path'
+    Plug 'hrsh7th/cmp-cmdline'
+    Plug 'hrsh7th/nvim-cmp'
+    Plug 'quangnguyen30192/cmp-nvim-ultisnips'
 endif
 " }}}}
 
@@ -153,7 +159,8 @@ if has('nvim-0.5')
     runtime plugin-setup/lsp-cpp.lua
     runtime plugin-setup/lsp-python.lua
     runtime plugin-setup/lsp-rust.lua
-    runtime plugin-setup/compe.lua
+    " runtime plugin-setup/compe.lua
+    runtime plugin-setup/nvim-cmp.lua
     runtime plugin-setup/lualine.lua
     runtime plugin-setup/nightfox.lua
     colorscheme nightfox
