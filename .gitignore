@@ -1,3 +1,4 @@
 nvim/node_modules/
 nvim/package-lock.json
+nvim/local.vim
 zsh/.zcompdump
