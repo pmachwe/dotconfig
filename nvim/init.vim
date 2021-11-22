@@ -188,6 +188,7 @@ runtime local.vim
 " {{{ Mappings
 
 nnoremap ; :
+vnoremap ; :
 
 " Better ways to escape {{{{
 " Double press most used motion keys
@@ -223,8 +224,10 @@ nnoremap D <C-d>
 nnoremap <A-o> o<Esc>
 nnoremap <A-O> O<Esc>
 
-inoremap <leader>w <Esc>:w<CR>
-nnoremap <leader>w :w<CR>
+" :up instead of :w because :up only saves
+" when there is a change
+inoremap <leader>w <Esc>:up<CR>
+nnoremap <leader>w :up<CR>
 
 nnoremap <leader>i :e ~/.config/nvim/init.vim<CR>
 
@@ -234,6 +237,10 @@ nnoremap <leader>o :only<CR>
 " Avoid quitting by mistake
 cabbrev q <c-r>=(getcmdtype()==':' && getcmdpos()==1 ? 'bd' : 'q')<CR>
 cabbrev Q <c-r>=(getcmdtype()==':' && getcmdpos()==1 ? 'quit' : 'Q')<CR>
+
+" Paste the yanked text and not the
+" deleted text
+nnoremap <leader>p "0p
 
 " }}}}
 "
