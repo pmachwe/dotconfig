@@ -210,9 +210,9 @@ nnoremap <A-p>            :tabprevious<CR>
 
 " Taken from
 " https://stackoverflow.com/questions/1708623/opening-files-in-the-same-folder-as-the-current-file-in-vim
-nnoremap ,e :edit <C-R>=expand("%:p:h") . "/" <CR>
-nnoremap ,t :tabe <C-R>=expand("%:p:h") . "/" <CR>
-nnoremap ,s :split <C-R>=expand("%:p:h") . "/" <CR>
+nnoremap <leader>e :edit <C-R>=expand("%:p:h") . "/" <CR>
+" nnoremap ,t :tabe <C-R>=expand("%:p:h") . "/" <CR>
+" nnoremap ,s :split <C-R>=expand("%:p:h") . "/" <CR>
 " }}}}
 
 " Easier Motion {{{{
