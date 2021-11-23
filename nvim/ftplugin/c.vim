@@ -30,8 +30,8 @@ nnoremap <buffer> <leader>cf :call cscope#cscope#Cscope("f", "<C-R><C-W>")<CR>
 nnoremap <buffer> <leader>ci :call cscope#cscope#Cscope("i", "<C-R><C-W>")<CR>
 nnoremap <buffer> <leader>ca :call cscope#cscope#Cscope("a", "<C-R><C-W>")<CR>
 
-nnoremap <buffer> gr :call cscope#cscope#Cscope("s", "<C-R><C-W>")<CR>
-nnoremap <buffer> gd :call cscope#cscope#Cscope("g", "<C-R><C-W>")<CR>
+" nnoremap <buffer> gr :call cscope#cscope#Cscope("s", "<C-R><C-W>")<CR>
+" nnoremap <buffer> gd :call cscope#cscope#Cscope("g", "<C-R><C-W>")<CR>
 
 nnoremap <buffer> <Leader>cG :CscopeFindGlobal<SPACE>
 nnoremap <buffer> <Leader>cC :CscopeFindCallers<SPACE>
@@ -39,4 +39,4 @@ nnoremap <buffer> <Leader>cF :CscopeFindFile<SPACE>
 nnoremap <buffer> <Leader>cT :CscopeFindTextString<SPACE>
 nnoremap <buffer> <Leader>cS :CscopeFindSymbol<SPACE>
 
-nnoremap <buffer> K :call ftplugin#c#PreviewTagToggle()<CR>
+" nnoremap <buffer> K :call ftplugin#c#PreviewTagToggle()<CR>
