@@ -2,3 +2,7 @@
 " and usually do not need any editing.
 
 lua require('cmp').setup.buffer { enabled = false }
+
+setlocal noswf bh=unload
+setlocal ul=-1
+syntax off
