@@ -93,6 +93,7 @@ endif
 
 " Trying {{{{
 Plug 'https://github.com/voldikss/vim-floaterm.git'
+Plug 'https://github.com/ervandew/supertab.git'
 " }}}}
 
 call plug#end()
