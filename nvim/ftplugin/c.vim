@@ -36,7 +36,7 @@ nnoremap <buffer> <Leader>cF :CscopeFindFile<SPACE>
 nnoremap <buffer> <Leader>cT :CscopeFindTextString<SPACE>
 nnoremap <buffer> <Leader>cS :CscopeFindSymbol<SPACE>
 
-if !filereadable(expand('~/.work_machine'))
+if filereadable(expand('~/.work_machine'))
   nnoremap <buffer> gr :call cscope#cscope#Cscope("s", "<C-R><C-W>")<CR>
   nnoremap <buffer> gd :call cscope#cscope#Cscope("g", "<C-R><C-W>")<CR>
   nnoremap <buffer> K :call ftplugin#c#PreviewTagToggle()<CR>
