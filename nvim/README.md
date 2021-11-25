@@ -21,4 +21,4 @@ Try out these plugins sometime.
 # TODOs
 
   * [ ] Setup treesitter
-  * [ ] Setup completions with lsp: [completion-nvim](https://github.com/nvim-lua/completion-nvim) or [nvim-cmp](https://github.com/hrsh7th/nvim-cmp)
+  * [X] Setup completions with lsp: [completion-nvim](https://github.com/nvim-lua/completion-nvim) or [nvim-cmp](https://github.com/hrsh7th/nvim-cmp)
