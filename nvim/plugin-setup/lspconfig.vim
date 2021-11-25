@@ -1,3 +1,5 @@
+lua require'lspconfig'.clangd.setup{}
+
 " Taken from
 " https://www.chrisatmachine.com/Neovim/27-native-lsp/
 
@@ -24,3 +26,5 @@ if !filereadable(expand('~/.work_machine'))
   autocmd BufWritePre *.c lua vim.lsp.buf.formatting_sync(nil, 100)
   autocmd BufWritePre *.h lua vim.lsp.buf.formatting_sync(nil, 100)
 endif
+
+
