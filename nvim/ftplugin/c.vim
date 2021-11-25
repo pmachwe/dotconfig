@@ -40,4 +40,7 @@ if filereadable(expand('~/.work_machine'))
   nnoremap <buffer> gr :call cscope#cscope#Cscope("s", "<C-R><C-W>")<CR>
   nnoremap <buffer> gd :call cscope#cscope#Cscope("g", "<C-R><C-W>")<CR>
   nnoremap <buffer> K :call ftplugin#c#PreviewTagToggle()<CR>
+  " Disable diagnostics with lsp
+  " https://github.com/neovim/nvim-lspconfig/issues/662
+  lua vim.lsp.handlers["textDocument/publishDiagnostics"] = function() end
 endif
