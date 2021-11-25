@@ -42,5 +42,7 @@ if filereadable(expand('~/.work_machine'))
   nnoremap <buffer> K :call ftplugin#c#PreviewTagToggle()<CR>
   " Disable diagnostics with lsp
   " https://github.com/neovim/nvim-lspconfig/issues/662
-  lua vim.lsp.handlers["textDocument/publishDiagnostics"] = function() end
+  " lua vim.lsp.handlers["textDocument/publishDiagnostics"] = function() end
+else
+  lua require'lspconfig'.clangd.setup{}
 endif

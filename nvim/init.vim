@@ -158,7 +158,6 @@ endif
 " Configuration {{{
 if has('nvim-0.5')
     runtime plugin-setup/lspconfig.vim
-    runtime plugin-setup/lsp-cpp.lua
     runtime plugin-setup/lsp-python.lua
     runtime plugin-setup/lsp-rust.lua
     " runtime plugin-setup/compe.lua
