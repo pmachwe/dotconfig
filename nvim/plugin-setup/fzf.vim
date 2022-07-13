@@ -16,7 +16,8 @@ let g:fzf_command_prefix = 'Fzf'
 " Mappings
 nnoremap <leader>f :FzfFiles<CR>
 nnoremap <leader>b :FzfBuffers<CR>
-nnoremap <leader>g :FzfRg<CR>
+nnoremap <leader>G :FzfRg<CR>
+nnoremap <leader>g :FzfRg %:p:h<CR>
 nnoremap <leader>t :FzfBTags<CR>
 nnoremap <leader>m :FzfMarks<CR>
 nnoremap <leader>h :FzfHistory<CR>
