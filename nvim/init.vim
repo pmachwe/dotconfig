@@ -117,7 +117,7 @@ set path+=**
 set wildmenu
 set wildmode=list:longest,full
 set clipboard+=unnamedplus
-set grepprg=rg\ --vimgrep\ --smart-case\ --follow
+set grepprg=rg\ --vimgrep\ --smart-case\ --follow\ --search-zip
 
 " }}}
 
@@ -179,7 +179,7 @@ runtime plugin-setup/fzf.vim
 runtime plugin-setup/vimwiki.vim
 runtime plugin-setup/tmux-navigator.vim
 runtime plugin-setup/cscope.vim
-runtime plugin-setup/easymotion.vim
+" runtime plugin-setup/easymotion.vim
 runtime plugin-setup/p4.vim
 runtime plugin-setup/floaterm.vim
 
@@ -238,8 +238,8 @@ nnoremap <leader>k :bd<CR>
 nnoremap <leader>o :only<CR>
 
 " Avoid quitting by mistake
-cabbrev q <c-r>=(getcmdtype()==':' && getcmdpos()==1 ? 'bd' : 'q')<CR>
-cabbrev Q <c-r>=(getcmdtype()==':' && getcmdpos()==1 ? 'quit' : 'Q')<CR>
+" cabbrev q <c-r>=(getcmdtype()==':' && getcmdpos()==1 ? 'bd' : 'q')<CR>
+" cabbrev Q <c-r>=(getcmdtype()==':' && getcmdpos()==1 ? 'quit' : 'Q')<CR>
 
 " Paste the yanked text and not the
 " deleted text
