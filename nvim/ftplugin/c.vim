@@ -45,4 +45,9 @@ if filereadable(expand('~/.work_machine'))
   lua vim.lsp.handlers["textDocument/publishDiagnostics"] = function() end
 endif
 
+" To align function arguments in same column
+" namespace without indent
+" public/private without indent
+setlocal cino+=(0,N-s,g0
+
 echom "Loaded c.vim"
