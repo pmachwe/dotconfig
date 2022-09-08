@@ -1,4 +1,5 @@
 require('plugins')
+require('plugins/settings')
 require('settings')
 require('nvim-cmp')
 require('themes/nightfox')
@@ -11,5 +12,3 @@ require('mappings')
 
 -- Set theme
 vim.cmd("colorscheme nordfox")
-
-require('leap').set_default_keymaps()
