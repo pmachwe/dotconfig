@@ -5,8 +5,10 @@ require('nvim-cmp')
 require('themes/nightfox')
 require('lsp')
 require('treesitter')
+require('treesitter/context')
+require('treesitter/rainbow')
 
 -- Set theme
-vim.cmd("colorscheme nightfox")
+vim.cmd("colorscheme nordfox")
 
 require('leap').set_default_keymaps()

@@ -2,6 +2,17 @@ return require('packer').startup(function(use)
   -- Packer can manage itself
   use 'wbthomason/packer.nvim'
 
+  -- LSP
+  use 'neovim/nvim-lspconfig'
+
+  -- Treesitter
+  use {
+      'nvim-treesitter/nvim-treesitter',
+      run = ':TSUpdate'
+  }
+  use 'nvim-treesitter/nvim-treesitter-context'
+  use 'p00f/nvim-ts-rainbow'
+
   -- Fuzzy finder
   use {
 	  'nvim-telescope/telescope.nvim', tag = '0.1.0',
@@ -9,7 +20,6 @@ return require('packer').startup(function(use)
   }
   
   -- Autocomplete
-  use 'neovim/nvim-lspconfig'
   use 'hrsh7th/cmp-nvim-lsp'
   use 'hrsh7th/cmp-buffer'
   use 'hrsh7th/cmp-path'
@@ -23,15 +33,6 @@ return require('packer').startup(function(use)
 
   -- Colorscheme
   use "EdenEast/nightfox.nvim"
-
-  -- LSP
-  use 'neovim/nvim-lspconfig'
-
-  -- Treesitter
-  use {
-      'nvim-treesitter/nvim-treesitter',
-      run = ':TSUpdate'
-  }
 
   -- General utilities
   use 'ggandor/leap.nvim' -- sneak movement
