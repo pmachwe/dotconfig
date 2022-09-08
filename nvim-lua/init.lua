@@ -7,6 +7,7 @@ require('lsp')
 require('treesitter')
 require('treesitter/context')
 require('treesitter/rainbow')
+require('plugins/lualine')
 
 -- Set theme
 vim.cmd("colorscheme nordfox")

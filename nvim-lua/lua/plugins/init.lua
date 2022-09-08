@@ -34,8 +34,21 @@ return require('packer').startup(function(use)
   -- Colorscheme
   use "EdenEast/nightfox.nvim"
 
+  -- Status line
+  use 'hoob3rt/lualine.nvim'
+  use 'kyazdani42/nvim-web-devicons'
+  use 'ryanoasis/vim-devicons'
+
   -- General utilities
   use 'ggandor/leap.nvim' -- sneak movement
+  use 'jiangmiao/auto-pairs'
+  use 'tpope/vim-commentary'
+  use 'machakann/vim-highlightedyank'
+  use 'tpope/vim-dispatch'
+  use 'junegunn/vim-peekaboo'
+  use 'preservim/tagbar'
+  use 'ngemily/vim-vp4'
+
   use {
       'nmac427/guess-indent.nvim',
       config = function() require('guess-indent').setup {} end,
