@@ -19,4 +19,5 @@ vim.o.scrolloff = 5
 vim.o.showmatch = true
 
 vim.o.clipboard = 'unnamedplus'
+-- TODO
 -- vim.o.path:append('**')
