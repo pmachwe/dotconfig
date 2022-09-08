@@ -48,6 +48,7 @@ return require('packer').startup(function(use)
   use 'junegunn/vim-peekaboo'
   use 'preservim/tagbar'
   use 'ngemily/vim-vp4'
+  use 'christoomey/vim-tmux-navigator'
 
   use {
       'nmac427/guess-indent.nvim',
