@@ -14,6 +14,7 @@ return require('packer').startup(function(use)
   use 'hrsh7th/cmp-buffer'
   use 'hrsh7th/cmp-path'
   use 'hrsh7th/cmp-cmdline'
+  use 'quangnguyen30192/cmp-nvim-tags'
   use 'hrsh7th/nvim-cmp'
 
   -- For luasnip users.
@@ -24,6 +25,19 @@ return require('packer').startup(function(use)
   use "EdenEast/nightfox.nvim"
 
   -- LSP
+  use 'neovim/nvim-lspconfig'
+
   -- Treesitter
+  use {
+      'nvim-treesitter/nvim-treesitter',
+      run = ':TSUpdate'
+  }
+
+  -- General utilities
+  use 'ggandor/leap.nvim' -- sneak movement
+  use {
+      'nmac427/guess-indent.nvim',
+      config = function() require('guess-indent').setup {} end,
+  }
 
 end)
