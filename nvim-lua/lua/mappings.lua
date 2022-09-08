@@ -15,6 +15,10 @@ vim.api.nvim_set_keymap('n', '<Leader>o', ':only<CR>', opts)
 vim.api.nvim_set_keymap('n', 'U', '<C-u>', opts)
 vim.api.nvim_set_keymap('n', 'D', '<C-d>', opts)
 
+vim.api.nvim_set_keymap('', '<A-l>', '<C-w>l', opts)
+vim.api.nvim_set_keymap('', '<A-k>', '<C-w>k', opts)
+vim.api.nvim_set_keymap('', '<A-j>', '<C-w>j', opts)
+vim.api.nvim_set_keymap('', '<A-h>', '<C-w>h', opts)
 
 -- Telescope
 vim.api.nvim_set_keymap('n', "<leader>ff", "<cmd>lua require('telescope.builtin').find_files()<cr>", opts)
