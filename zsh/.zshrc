@@ -7,7 +7,8 @@ bindkey -M viins 'kk' vi-cmd-mode
 autoload -Uz compinit
 compinit
 
-PROMPT=$'%F{cyan}%m%f%F{cyan} \U00B7 %f%F{cyan}%f%F{cyan}%2~%f%F{cyan} \U279C %f'
+# PROMPT=$'%F{cyan}%m%f%F{cyan} \U00B7 %f%F{cyan}%f%F{cyan}%2~%f%F{cyan} \U279C %f'
+PROMPT=$'%F{cyan}%m%f%F{cyan} \U00B7 %f%F{cyan}%f%F{cyan}%2~%f%F{cyan} \Uf178  %f'
 
 alias d='dirs -v | head -10'
 alias ls='ls -F'
