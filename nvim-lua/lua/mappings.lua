@@ -20,12 +20,6 @@ vim.api.nvim_set_keymap('', '<A-k>', '<C-w>k', opts)
 vim.api.nvim_set_keymap('', '<A-j>', '<C-w>j', opts)
 vim.api.nvim_set_keymap('', '<A-h>', '<C-w>h', opts)
 
--- Telescope
-vim.api.nvim_set_keymap('n', "<leader>ff", "<cmd>lua require('telescope.builtin').find_files()<CR>", opts)
-vim.api.nvim_set_keymap('n', "<leader>fg", "<cmd>lua require('telescope.builtin').live_grep()<CR>", opts)
-vim.api.nvim_set_keymap('n', "<leader>fb", "<cmd>lua require('telescope.builtin').buffers()<CR>", opts)
-vim.api.nvim_set_keymap('n', "<leader>fh", "<cmd>lua require('telescope.builtin').help_tags()<CR>", opts)
-
 -- Perforce
 vim.api.nvim_set_keymap('n', "<buffer> <localleader>pp", ":Vp4", opts)
 vim.api.nvim_set_keymap('n', "<buffer> <localleader>pe", ":Vp4Edit<CR>", opts)
