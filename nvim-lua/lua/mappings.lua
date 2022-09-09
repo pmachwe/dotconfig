@@ -21,10 +21,10 @@ vim.api.nvim_set_keymap('', '<A-j>', '<C-w>j', opts)
 vim.api.nvim_set_keymap('', '<A-h>', '<C-w>h', opts)
 
 -- Telescope
-vim.api.nvim_set_keymap('n', "<leader>ff", "<cmd>lua require('telescope.builtin').find_files()<cr>", opts)
-vim.api.nvim_set_keymap('n', "<leader>fg",  "<cmd>lua require('telescope.builtin').live_grep()<cr>", opts)
-vim.api.nvim_set_keymap('n', "<leader>fb",  "<cmd>lua require('telescope.builtin').buffers()<cr>", opts)
-vim.api.nvim_set_keymap('n', "<leader>fh",  "<cmd>lua require('telescope.builtin').help_tags()<cr>", opts)
+vim.api.nvim_set_keymap('n', "<leader>ff", "<cmd>lua require('telescope.builtin').find_files()<CR>", opts)
+vim.api.nvim_set_keymap('n', "<leader>fg", "<cmd>lua require('telescope.builtin').live_grep()<CR>", opts)
+vim.api.nvim_set_keymap('n', "<leader>fb", "<cmd>lua require('telescope.builtin').buffers()<CR>", opts)
+vim.api.nvim_set_keymap('n', "<leader>fh", "<cmd>lua require('telescope.builtin').help_tags()<CR>", opts)
 
 -- Perforce
 vim.api.nvim_set_keymap('n', "<buffer> <localleader>pp", ":Vp4", opts)
@@ -39,10 +39,10 @@ vim.api.nvim_set_keymap('n', "<buffer> <localleader>ps", ":Vp4 sync<CR>", opts)
 
 -- Tmux Navigator
 vim.api.nvim_set_keymap('n', '<A-h>', ':TmuxNavigateLeft<CR>', opts)
-vim.api.nvim_set_keymap('n', '<A-j>', ':TmuxNavigateDown', opts)
-vim.api.nvim_set_keymap('n', '<A-k>', ':TmuxNavigateUp', opts)
-vim.api.nvim_set_keymap('n', '<A-l>', ':TmuxNavigateRight', opts)
-vim.api.nvim_set_keymap('n', '<A-\\>', ':TmuxNavigatePrevious', opts)
+vim.api.nvim_set_keymap('n', '<A-j>', ':TmuxNavigateDown<CR>', opts)
+vim.api.nvim_set_keymap('n', '<A-k>', ':TmuxNavigateUp<CR>', opts)
+vim.api.nvim_set_keymap('n', '<A-l>', ':TmuxNavigateRight<CR>', opts)
+vim.api.nvim_set_keymap('n', '<A-\\>', ':TmuxNavigatePrevious<CR>', opts)
 
 -- Quickfix
 vim.api.nvim_set_keymap('n', '<leader>qo', ':copen<CR>', opts)
