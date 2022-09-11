@@ -7,18 +7,18 @@ return require('packer').startup(function(use)
 
   -- Treesitter
   use {
-      'nvim-treesitter/nvim-treesitter',
-      run = ':TSUpdate'
+    'nvim-treesitter/nvim-treesitter',
+    run = ':TSUpdate'
   }
   use 'nvim-treesitter/nvim-treesitter-context'
   use 'p00f/nvim-ts-rainbow'
 
   -- Fuzzy finder
   use {
-	  'nvim-telescope/telescope.nvim', tag = '0.1.0',
-	  requires = { {'nvim-lua/plenary.nvim'} }
+    'nvim-telescope/telescope.nvim', tag = '0.1.0',
+    requires = { {'nvim-lua/plenary.nvim'} }
   }
-  
+
   -- Autocomplete
   use 'hrsh7th/cmp-nvim-lsp'
   use 'hrsh7th/cmp-buffer'
@@ -52,12 +52,16 @@ return require('packer').startup(function(use)
   use 'voldikss/vim-floaterm'
 
   use {
-      'nmac427/guess-indent.nvim',
-      config = function() require('guess-indent').setup {} end,
+    'nmac427/guess-indent.nvim',
+    config = function() require('guess-indent').setup {} end,
   }
 
   -- Experiments
   use 'norcalli/nvim-terminal.lua'
   use 'camgraff/telescope-tmux.nvim'
+  use {
+    "AckslD/nvim-neoclip.lua",
+    config = function() require('neoclip').setup() end,
+  }
 
 end)

@@ -13,3 +13,8 @@ vim.api.nvim_set_keymap('n', '<Leader>fe', "<cmd>lua require('telescope.builtin'
 -- Mappings for Tmux extension
 vim.api.nvim_set_keymap('n', '<Leader>ftw', ":Telescope tmux windows<CR>", opts)
 vim.api.nvim_set_keymap('n', '<Leader>fts', ":Telescope tmux sessions<CR>", opts)
+
+-- Neoclip
+local ts = require('telescope')
+ts.load_extension('neoclip')
+vim.api.nvim_set_keymap('n', '<Leader>fr', ":Telescope neoclip<CR>", opts)
