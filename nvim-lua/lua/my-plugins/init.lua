@@ -19,6 +19,9 @@ return require('packer').startup(function(use)
     requires = { {'nvim-lua/plenary.nvim'} }
   }
 
+  -- Faster fuzzy impl in C
+  use {'nvim-telescope/telescope-fzf-native.nvim', run = 'make' }
+
   -- Autocomplete
   use 'hrsh7th/cmp-nvim-lsp'
   use 'hrsh7th/cmp-buffer'
