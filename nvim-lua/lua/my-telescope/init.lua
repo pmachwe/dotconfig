@@ -37,6 +37,10 @@ vim.api.nvim_set_keymap('n', '<Leader>fr', ":Telescope neoclip<CR>", opts)
 -- load_extension, somewhere after setup function:
 ts.load_extension('fzf')
 
+-- P4 files
+ts.load_extension('vim_p4_files')
+vim.api.nvim_set_keymap('n', '<Leader>fp', ":Telescope vim_p4_files<CR>", opts)
+
 -- Telescope customization
 local actions = require("telescope.actions")
 

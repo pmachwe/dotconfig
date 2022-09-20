@@ -21,6 +21,8 @@ return require('packer').startup(function(use)
 
   -- Faster fuzzy impl in C
   use {'nvim-telescope/telescope-fzf-native.nvim', run = 'make' }
+  -- P4 files
+  use { 'Badhi/vim-p4-files' }
 
   -- Autocomplete
   use 'hrsh7th/cmp-nvim-lsp'
